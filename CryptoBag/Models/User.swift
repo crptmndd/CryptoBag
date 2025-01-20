@@ -1,8 +1,9 @@
-//
-//  User.swift
-//  CryptoBag
-//
-//  Created by Vadim Valeev on 20.01.2025.
-//
+import UIKit
 
-import Foundation
+
+struct User {
+    let name: String
+    let email: String
+    let password: String
+    let image: UIImage?
+}

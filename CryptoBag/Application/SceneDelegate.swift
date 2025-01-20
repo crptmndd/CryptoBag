@@ -22,8 +22,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginViewModel = LoginViewModel()
         let loginViewController = LoginViewController(loginViewModel: loginViewModel)
         
-        let navigationController = UINavigationController(rootViewController: loginViewController)
+        let mainViewModel = MainViewModel()
+        let mainViewController = MainViewController(mainViewModel: mainViewModel)
         
+        var navigationController: UINavigationController!
+        
+        let loggedIn = loginViewModel.isUserLoggedIn()
+        
+//        if !loggedIn {
+//            navigationController = UINavigationController(rootViewController: loginViewController)
+//        } else {
+//            navigationController = UINavigationController(rootViewController: mainViewController)
+//        }
+        navigationController = UINavigationController(rootViewController: loginViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
