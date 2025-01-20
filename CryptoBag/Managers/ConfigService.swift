@@ -6,7 +6,7 @@ protocol UserDefaultsManagerProtocol: AnyObject {
     func isLoggedIn() -> Bool
 }
 
-final class UserDefaultsManager: UserDefaultsManagerProtocol {
+final class SessionService: UserDefaultsManagerProtocol {
     
     static let shared = UserDefaultsManager()
     
