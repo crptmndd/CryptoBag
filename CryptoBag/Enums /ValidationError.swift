@@ -1,5 +1,7 @@
 enum ValidationError: Error {
-    case invalidFormat
-    case missingValue
-    case noMatch
+    case tooShort
+    case noUppercase
+    case noDigit
+    case passwordsDoNotMatch
+    case emptyFields
 }

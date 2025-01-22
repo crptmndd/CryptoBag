@@ -15,16 +15,28 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				Managers/DataManager.swift,
 			);
 			target = 7F5BA1F32D3D589C0028CBF4 /* CryptoBag */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		7F6B5B1C2D41163100368C70 /* Exceptions for "CryptoBag" folder in "Copy Bundle Resources" phase from "CryptoBag" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 7F5BA1F22D3D589C0028CBF4 /* Resources */;
+			membershipExceptions = (
+				Managers/DataManager.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7F5BA1F62D3D589C0028CBF4 /* CryptoBag */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				7F5BA2062D3D589E0028CBF4 /* Exceptions for "CryptoBag" folder in "CryptoBag" target */,
+				7F6B5B1C2D41163100368C70 /* Exceptions for "CryptoBag" folder in "Copy Bundle Resources" phase from "CryptoBag" target */,
 			);
 			path = CryptoBag;
 			sourceTree = "<group>";

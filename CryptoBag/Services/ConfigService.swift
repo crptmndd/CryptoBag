@@ -1,14 +1,14 @@
 import Foundation
 
-protocol UserDefaultsManagerProtocol: AnyObject {
+protocol ConfigServiceProtocol: AnyObject {
     func logInUser()
     func logOutUser()
     func isLoggedIn() -> Bool
 }
 
-final class SessionService: UserDefaultsManagerProtocol {
+final class ConfigService: ConfigServiceProtocol {
     
-    static let shared = UserDefaultsManager()
+    static let shared = ConfigService()
     
     private let userDefaults = UserDefaults(suiteName: "logged_info")
     private let loggedInKey = "logged_in"

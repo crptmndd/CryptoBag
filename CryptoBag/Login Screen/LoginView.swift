@@ -8,24 +8,27 @@ final class LoginView: UIView {
     var onFaceIDButtonTap: (() -> Void)?
     
     private lazy var loginTextField: UITextField = {
-        let textFeild = UITextField()
-        textFeild.placeholder = "Login"
-        textFeild.keyboardType = .emailAddress
-        textFeild.autocapitalizationType = .none
-        textFeild.translatesAutoresizingMaskIntoConstraints = false
-        textFeild.borderStyle = .roundedRect
-        return textFeild
+        let textField = UITextField()
+        textField.placeholder = "Login"
+        textField.keyboardType = .emailAddress
+        textField.autocapitalizationType = .none
+        textField.borderStyle = .roundedRect
+        textField.textContentType = .username
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
     }()
     
     private lazy var passwordTextField: UITextField = {
-        let textFeild = UITextField()
-        textFeild.placeholder = "Password"
-        textFeild.keyboardType = .default
-        textFeild.autocapitalizationType = .none
-        textFeild.isSecureTextEntry = true
-        textFeild.translatesAutoresizingMaskIntoConstraints = false
-        textFeild.borderStyle = .roundedRect
-        return textFeild
+        let textField = UITextField()
+        textField.placeholder = "Password"
+        textField.keyboardType = .default
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.textContentType = .password
+        textField.borderStyle = .roundedRect
+        textField.isSecureTextEntry = true
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
     }()
     
     private lazy var loginButton: UIButton = {

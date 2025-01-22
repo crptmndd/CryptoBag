@@ -25,10 +25,10 @@ final class LoginViewModel: LoginViewModelProtocol {
     var onGuestLogin: (() -> Void)?
     var onFaceIDLogin: (() -> Void)?
     
-    private let userDefaultsManager: UserDefaultsManagerProtocol
+    private let userDefaultsManager: ConfigServiceProtocol
     private let faceIDService: FaceIDServiceProtocol
     
-    init(userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager.shared, faceIDService: FaceIDServiceProtocol = FaceIDService()) {
+    init(userDefaultsManager: ConfigServiceProtocol = ConfigService.shared, faceIDService: FaceIDServiceProtocol = FaceIDService()) {
         self.userDefaultsManager = userDefaultsManager
         self.faceIDService = faceIDService
     }
